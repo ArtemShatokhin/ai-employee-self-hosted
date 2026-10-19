@@ -56,4 +56,4 @@ Claim the admin account with an address listed in `KORTIX_PLATFORM_ADMIN_EMAILS`
 
 One isolated sandbox per session. Each session has its own isolated machine and branch. Connector credentials are brokered server-side and never enter the machine. Every action is recorded. Reading, exporting and streaming the audit log depend on the plan. The rule that stops a write is a policy block in `kortix.yaml`, committed with the rest of the project, so a diff shows who changed what an agent may do.
 
-For the wider question of running an AI employee as a role, see [opensourceaiemployee.com](https://opensourceaiemployee.com). The product documentation is at [kortix.com/docs](https://kortix.com/docs).
+For the wider question of running an AI employee as a role, see [opensourceaiemployee.com](https://opensourceaiemployee.com). The [open-source AI employee guide](https://opensourceaiemployee.com/open-source-ai-employee) is the long version of that case. The product documentation is at [kortix.com/docs](https://kortix.com/docs).
