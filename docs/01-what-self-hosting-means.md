@@ -4,7 +4,7 @@ Kortix is the open-source AI Operating System. Self-hosting it means running the
 
 ## Decision one: where the agent runs
 
-The stack and the work are in different places. `kortix self-host start` runs a Docker Compose project, `kortix-<instance>`, on your server: the browser app, the `/v1` API, the model gateway, Supabase, a migration job, an updater, and Caddy when you run domain mode. Every session, the thing that actually executes a turn, runs on a sandbox provider off the box: Daytona by default, or Platinum or E2B. The instance creates it with your provider key.
+The stack and the work are in different places. `kortix self-host start` runs a Docker Compose project, `kortix-<instance>`, on your server: the browser app, the `/v1` API, the model gateway, Supabase, a migration job, an updater, and Caddy when you run domain mode. Every session, the thing that actually executes a turn, runs on a sandbox provider off the box: Platinum by default, with Daytona available as a legacy fallback. The instance creates it with your provider key.
 
 That split creates one hard requirement. The sandbox has to call back to the instance over the public API URL, held in `KORTIX_URL`. A machine that cannot be reached from the internet cannot host running sessions. The self-host page states this plainly: without a domain, every port binds `127.0.0.1`, and sessions do not run because the sandbox cannot reach the API. This is also why Kortix does not describe the deployment as air-gapped. Images come from Docker Hub, and the default sandbox provider is remote.
 
