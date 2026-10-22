@@ -18,7 +18,7 @@ Each one has a different answer for a laptop, a VPC and an on-prem network. The 
 
 Every service belongs to one Compose project named `kortix-<instance>`. The server runs the browser app, the REST API, the model gateway, a one-shot migration job, the updater, the Supabase set, and Caddy when a domain is configured. Two things always sit off the box:
 
-- **Sandboxes.** A session runs on Daytona (the default), Platinum or E2B, created with your provider key, and reaches your instance over a public URL. The API has to be addressable from outside for any of this to start.
+- **Sandboxes.** A session runs on Platinum (the default; Daytona is a legacy fallback), created with your provider key, and reaches your instance over a public URL. The API has to be addressable from outside for any of this to start.
 - **Model providers.** The gateway on your box calls the providers your projects connect.
 
 Three Docker Hub repositories supply it: `kortix/kortix-frontend`, `kortix/kortix-api` and `kortix/kortix-gateway`. A pull needs no credentials.
