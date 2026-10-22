@@ -32,7 +32,7 @@ kortix self-host configure
 2. Admin email, written to `KORTIX_PLATFORM_ADMIN_EMAILS`.
 3. Enterprise license, which turns on SSO, SCIM, role-based access control and audit read on this instance.
 4. Restrict account creation, on by default.
-5. Sandbox provider: `daytona`, `platinum` or `e2b`, plus that provider's key and settings.
+5. Sandbox provider: `platinum`, or `daytona` as the legacy fallback, plus that provider's key and settings.
 6. Apps hosting, optional.
 7. Preview origins, suggested `p.<domain>`, which needs the wildcard record from step 1.
 8. Composio, optional, and the app catalog for connectors.
